@@ -7,14 +7,14 @@ const JobsPage = () => {
   const navigate = useNavigate();
 
   const fetchAndUpdateJobs = () => {
-    fetch("jobs/")
+    fetch("/api/jobs/")
       .then((resp) => resp.json())
       .then(setJobs);
   };
 
   const handleDelete = (id) => {
     if (window.confirm("Are you sure you want to delete this job?"))
-      fetch(`/jobs/${id}`, {
+      fetch(`/api/jobs/${id}`, {
         method: "DELETE",
       })
         .then((resp) => resp.text())
@@ -25,7 +25,7 @@ const JobsPage = () => {
         .catch((err) => console.log(err));
   };
 
-  const handleEdit = (id) => navigate("/edit-job/" + id);
+  const handleEdit = (id) => navigate("edit-job/" + id);
 
   useEffect(fetchAndUpdateJobs, []);
 

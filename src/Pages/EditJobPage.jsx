@@ -11,7 +11,7 @@ const EditJobPage = () => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
-    fetch(`/jobs/${id}/`, {
+    fetch(`/api/jobs/${id}/`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -28,14 +28,14 @@ const EditJobPage = () => {
 
   useEffect(() => {
     if (id)
-      fetch("/jobs/" + id)
+      fetch("/api/jobs/" + id)
         .then((resp) => resp.json())
         .then((data) => setDefaultValues(data));
   }, [id]);
 
   return (
     <div className="post-job-page">
-      <h1>Post a Job</h1>
+      <h1>Edit a Job</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="title">Title : </label>
         <input

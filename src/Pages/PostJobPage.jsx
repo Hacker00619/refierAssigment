@@ -8,7 +8,7 @@ const PostJobPage = () => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
-    fetch("jobs/", {
+    fetch("/api/jobs/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
