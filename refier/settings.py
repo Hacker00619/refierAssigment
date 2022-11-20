@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+xjzbi!-l@939_fr(8p6v&&-cb21y6gk6uu$(hl-y(y*p^zdqz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['refier-api.herokuapp.com']
 
 
 # Application definition
