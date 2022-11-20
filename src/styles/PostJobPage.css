@@ -1,0 +1,28 @@
+.post-job-page {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-job-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  border: 1px solid black;
+  border-radius: 0.2rem;
+}
+
+.post-job-page form input,
+.post-job-page form select,
+.post-job-page form textarea {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.post-job-page form button {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  background-color: #303030;
+  color: white;
+}
