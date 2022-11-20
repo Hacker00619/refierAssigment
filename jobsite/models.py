@@ -12,11 +12,11 @@ class jobDiscription(models.Model):
         ('Remote','Remote'),
         ('In Office','In Office')))
     location = models.CharField(max_length=50)
-    minSalary = models.CharField(max_length=50)
-    maxSalary = models.CharField(max_length=50)
-    incentive = models.CharField(max_length=50)
-    workExMin = models.CharField(max_length=50)
-    workExMax = models.CharField(max_length=50)
+    minSalary = models.IntegerField(max_length=50)
+    maxSalary = models.IntegerField(max_length=50)
+    incentive = models.IntegerField(max_length=50)
+    workExMin = models.IntegerField(max_length=2)
+    workExMax = models.IntegerField(max_length=2)
     vacancy = models.CharField(max_length=50)
     jobDesc = models.TextField()
 
