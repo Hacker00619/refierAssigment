@@ -7,3 +7,6 @@ from jobsite.seriealizers import jobDescSerialier
 class JobViewSet(viewsets.ModelViewSet):
     queryset = jobDiscription.objects.all()
     serializer_class=jobDescSerialier
+    
+def index(request):
+    return render(request, 'index.html')

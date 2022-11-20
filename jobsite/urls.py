@@ -8,6 +8,6 @@ router = routers.DefaultRouter()
 router.register(r'jobs', JobViewSet)
 
 urlpatterns = [
-    # path('', views.index, name='index'),
+    path('', views.index, name='index'),
     path('api/', include(router.urls))
 ]
